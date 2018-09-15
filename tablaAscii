@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char* argv[]){
+	int contador=0;
+	char array[125];
+	for (contador= 0; contador<=125; contador++){
+		array[contador]=contador;
+		
+	}
+	 printf("Tabla Ascii del 33 al 125\n");
+	
+	for ( contador= 0; contador<=30; contador++){
+		printf("%c\t%d\t%c\t%d\t%c\t%d\n",array[contador+33],array[contador+33],array[contador+64],array[contador+64],array[contador+95],array[contador+95]);
+	}
+		
+	
+	
+	return 0;
+}
