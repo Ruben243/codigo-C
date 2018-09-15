@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void abecedario(int contador,char c){
+	printf("Este es el abecedario\n");
+	printf("Primero en mayusculas\n");
+	for (contador = 65; contador<= 90; contador++){
+		putchar(c + contador);
+		
+	}
+	printf("\n");
+}
+
+void abecedariom (int contador,char c){
+	printf("Y en minusculas\n");
+	for (contador= 97; contador<=122;contador++){
+		putchar(c + contador);
+		
+	}
+	printf("\n");
+}
+
+void tablas(int contador){
+	printf("Y ahora en tabla\n");
+	
+	for (contador= 0; contador<=25; contador++){
+		printf("Mayusculas\tminusculas\n");
+		printf("%c\t\t%c\n",contador+65,contador+97);
+	}
+}
+
+int main(){
+	int contador=0;
+	char c='\0';
+	
+	abecedario(contador,c);
+	
+	abecedariom(contador,c);
+	
+	tablas(contador);
+	
+	return 0;
+}
