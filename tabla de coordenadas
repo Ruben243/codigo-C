@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void tabla(){
+	srand (time(NULL));
+	int contador=0;
+	int contadorF=0;
+	int contadorC=0;
+	int array[4][4];
+	int filas=4;
+	int columnas=4;
+	
+
+	for (contadorF= 0;contadorF<filas;contadorF++){
+		if(contadorF>=1 ){
+			printf("\n");
+		}
+		for (contadorC= 0; contadorC<columnas;contadorC++){
+			array[contadorF][contadorC]=rand()%33 + 93;
+				printf("%d |",array[contadorF][contadorC]);
+			
+		}
+	
+	}
+	
+	
+	
+	for(contador=0;contador<=10;contador++){
+		printf("\nintroduce la primera coordenada(0-3): \n");
+		scanf("%d",&contadorF);
+		printf("\nintroduce la segunda coordenada(0-3): \n");
+		scanf("%d",&contadorC);
+		printf("EQUIVALENTE EN ASCII\n");
+		printf("%c ",array[contadorF][contadorC]);
+		if (array[contadorF][contadorC]>=65 && array[contadorF][contadorC]<91){
+			printf("\nes una mayuscula");
+		}else if(array[contadorF][contadorC]>=97 && array[contadorF][contadorC]<=122){
+			printf("\nes una minuscula");
+			
+		}else if(array[contadorF][contadorC]>=33 && array[contadorF][contadorC]<=47 && array[contadorF][contadorC]>57 && array[contadorF][contadorC]<=64 && array[contadorF][contadorC]>=91 && array[contadorF][contadorC]<=96){
+			printf("\nes un caracter");
+		}else if(array[contadorF][contadorC]>=48 && array[contadorF][contadorC]<=57){
+			printf("\n es un numero");
+		}else{
+			printf("\nes un caracter");
+		}
+	}
+}
+
+
+
+
+
+int main(int argc, char *argv[]){
+
+tabla();
+
+
+return 0;
+
+
+
+}
