@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int cuantos=0;
+int numero=0;
+
+int fibonacci(int numero){
+	
+ if (numero==1){
+	 
+	return 1;
+		
+		
+ }else{
+	if (numero==2){
+		
+		return 1;
+				
+	}else{
+		return fibonacci(numero-1)+fibonacci(numero-2);
+				
+		}
+		
+			
+	}
+		
+}		
+		
+int main(int arg,char *argv[]){	
+		
+	do{
+		printf("Numero de terminos de la serie: ");
+		scanf("%d",&cuantos);
+		
+	 }while(cuantos<=0);
+		for(numero=1; numero<=cuantos;numero++){
+			
+			printf("%d",fibonacci(numero));
+			printf("\n");
+		}
+		
+		return 0;
+}
