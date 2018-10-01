@@ -166,12 +166,16 @@ int main (int arg,char** argv){
 
 	switch(resultado){
 		case 1:
-				for(contador=0;contador<2;contador++){
-					printf("Introduce un numero entero: ");
+				for(contador=0;contador<2;){
+					printf("Introduce un numero entero entre 0-9: ");
 					scanf("%d",&numero);
-					array[contador]=numero;
-					printf("%d-%d\n",contador,numero);
+					if(numero>0 && numero<9){
+						array[contador]=numero;
+						printf("%d-%d\n",contador,numero);
+						contador++;
+					}
 					
+					printf("numero erroneo\n");
 				}
 
 				dividirDatos(array1,array[1],division);
@@ -183,13 +187,18 @@ int main (int arg,char** argv){
 		break;
 
 		case 2:
-		for(contador=0;contador<2;contador++){
-					printf("Introduce un numero entero: ");
+		for(contador=0;contador<2;){
+					printf("Introduce un numero entero entre 0-9: ");
 					scanf("%d",&numero);
-					array[contador]=numero;
-					printf("%d-%d\n",contador,numero);
+					if(numero>0 && numero<9){
+						array[contador]=numero;
+						printf("%d-%d\n",contador,numero);
+						contador++;
+					}
 					
+					printf("numero erroneo\n");
 				}
+				
 				codificarDatos(array1,array[0],ascii);
 				mostrarDatos2(ascii);
 
@@ -200,6 +209,6 @@ int main (int arg,char** argv){
 
 	}
 
-
+	printf("Fin del programa");
 	return 0;
 }
